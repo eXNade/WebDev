@@ -1,0 +1,139 @@
+body{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    top: -5px;
+    }
+header{
+    position: absolute;
+    width: 1440px;
+    height: 60px;
+    background-color: #FE1A19;
+    left: 0px;
+    top: 0px;
+}
+.mainText{
+    position: absolute;
+    width: 820px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+}
+.mainText p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+.HeadText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color:black;
+    display: flex;
+    align-items: center;
+}
+.Menu{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.FirstBlock{
+    box-sizing: border-box;
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    top: 112px;
+    left: 70px;
+    border: 5px solid #E5E000;
+    border-radius: 30px;
+}
+.FirstHead{
+    position: absolute;
+    width: 207px;
+    height: 23px;
+    top: 33px;
+    left: 33px;
+}
+.FirstText{
+    position: absolute;
+    width: 334px;
+    height: 670px;
+    top: 91px;
+    left: 33px;
+    }
+.SecondBlock{
+    box-sizing: border-box;
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    top: 112px;
+    left: 520px;
+    border: 5px solid #E5E000;
+    border-radius: 30px;
+}
+.SecondHead{
+    position: absolute;
+    width: 207px;
+    height: 23px;
+    top: 33px;
+    left: 33px;
+}
+.SecondText{
+    position: absolute;
+    width: 334px;
+    height: 670px;
+    top: 91px;
+    left: 33px;
+    }
+.ThirdBlock{    
+    box-sizing: border-box;
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    top: 112px;
+    left: 970px;
+    border: 5px solid #E5E000;
+    border-radius: 30px;
+}
+.ThirdHead{
+    position: absolute;
+    width: 207px;
+    height: 23px;
+    top: 33px;
+    left: 33px;
+}
+.ThirdText{
+    position: absolute;
+    width: 334px;
+    height: 670px;
+    top: 91px;
+    left: 33px;
+    }
+footer{
+    position: absolute;
+    width: 1440px;
+    height: 60px;
+    top: 964px;
+    background-color: #FE1A19;
+}
+.LastText {
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+    color: #FFFFFF ;
+}
+

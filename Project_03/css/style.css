@@ -1,0 +1,96 @@
+body{
+    width: 1440px;
+    height: 2427px;
+}
+header{
+    width: 1440px;
+    height: 200px;
+    background: #E5E000;
+    color: white
+}
+.name p{
+    position: absolute;
+    height: 40px;
+    width: 470px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    top: 20px;
+    left: 80px;
+    }
+.photo{
+    height: 1080px;
+    width: 1440px;
+}
+section.surName{
+    position: absolute;
+    height: 100px;
+    width: 1440px;
+    background: #E5E000;
+    top: 1280px;
+}
+div.surName{
+    height: 29px;
+    width: 935px;
+    
+}
+.surName p{
+    position: absolute;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 28.75px;
+    font-weight: 700;
+    color: white;
+    left: 80px;
+    top: 10px;
+}
+section.text{
+    position:absolute;
+    width: 1280px;
+    height: 637px;
+    left: 80px;
+    top: 1490px;
+}
+.text p{
+    font-family:Helvetica;
+    font-style: normal;
+    font-weight: 300;
+    font-size:50px;
+    line-height: 57px;
+    color: #000000;
+}
+.text p1{
+    font-family:Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    font-size:50px;
+    line-height: 57px;
+    color: #000000;
+}
+footer{
+    position: absolute;
+    width: 1440px;
+    height: 200px;
+    top: 2227px;
+    left: 0px;
+    background: #E5E000;
+}
+div.exit{
+    position: absolute;
+    width: 614px;
+    height: 64px;
+    top: 2px;
+    left: 746px;
+}
+.exit p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    line-height: 57.5px;
+    color:white;
+}
+div.logo{
+    position: absolute;
+    width: 205px;
+    height: 46px;
+    top: 60px;
+    left: 80px;
+}
