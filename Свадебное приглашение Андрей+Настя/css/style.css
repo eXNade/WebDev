@@ -1,0 +1,142 @@
+.background{
+    width: 100vw;
+    max-height: 100vh;
+    background: url(../img/111.jpg) center/cover no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+.background::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.backImg{
+    padding-bottom: 56.25%;
+}
+.background img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+.content{
+    width: 100%;
+    height: 40%;
+    margin: 200px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    color: #FFFFFF;
+    z-index: 3;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-family: cursive;
+}
+.content h1{
+    font-size: 42px;
+}
+.part1{
+    padding: 120px 0px 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.textBlock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    font-size: 18px;
+    font-family: cursive;
+}
+.time{
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+}
+.textBlock img{
+    width: 15%;
+    padding: 30px;
+}
+.textBlock1 p{
+    font-size: 42px;
+    font-weight: 700;
+    font-family: cursive;
+    margin: 0px 0px 90px 0px;
+}
+.texter{
+    margin: 90px 0px 0px 40px;
+    
+}
+.H-er{
+    padding: 0px 0px 40px;
+    font-weight: 700;
+}
+
+
+@media screen and (max-device-width: 600px){
+    .background{
+        width: 100%;
+        height: 600px;
+        background-repeat: no-repeat;
+    }
+    .time{
+        font-weight: 700;
+        font-size: 22px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 0px;
+    }
+    .textBlock img{
+        width: 15%;
+        padding: 0px;
+    }
+    .textBlock1 p{
+        font-size: 42px;
+        font-weight: 700;
+        font-family: cursive;
+        margin: 0px 0px 0px 0px;
+    }
+    .texter{
+        margin: 90px 0px 0px 40px;
+        
+    }
+    .H-er{
+        /*padding: 0px 0px 40px;*/
+        font-weight: 700;
+    }
+}
+@media screen and (max-device-width: 960px){
+    .background{
+        width: 100%;
+        height: 960px;
+        background-repeat: no-repeat;
+    }
+}
+@media screen and (max-device-width: 1264px){
+    .background{
+        width: 100%;
+        height: 1264px;
+        background-repeat: no-repeat;
+    }
+}
+@media screen and (max-device-width: 1904px){
+    .background{
+        width: 100%;
+        height: 1904px;
+        background-repeat: no-repeat;
+    }
+}
