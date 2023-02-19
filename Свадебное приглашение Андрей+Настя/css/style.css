@@ -417,7 +417,7 @@ fieldset{
         align-items: center;
         margin: 0px 10px;
     }
-    .formPresence label, input{
+    .formPresence label{
         display: block;
         margin: 30px 10px;
         font-size: 20px;
