@@ -269,12 +269,13 @@ input[type="text"]{
 }
 .personal div{
     border: 1px solid grey;
+    width: 100%;
 }
 .formPresence img{
     width: 80%;
 }
 fieldset{
-    width: 130%;
+    width: 100%;
 }
 
 /*Последний блок*/
@@ -416,7 +417,7 @@ fieldset{
         align-items: center;
         margin: 0px 10px;
     }
-    .formPresence label{
+    .formPresence label, input{
         display: block;
         margin: 30px 10px;
         font-size: 20px;
