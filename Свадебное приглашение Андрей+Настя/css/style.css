@@ -122,7 +122,6 @@
     justify-content: center;
     align-items: center;
     margin: 50px 50px;
-
 }
 .navText{
     width: 35%;
@@ -232,6 +231,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 150px 0px 105px 0px;
 }
 .feedbackText h1{
@@ -284,6 +284,7 @@ fieldset{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .footer img{
     width: 40vw;
@@ -324,7 +325,6 @@ fieldset{
     }
     .texter{
         margin: 90px 0px 0px 0px;
-        
     }
     .H-er{
         /*padding: 0px 0px 40px;*/
@@ -334,6 +334,120 @@ fieldset{
         max-width: 90vw;
         max-height: 90vh;  
     }
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 100px 10px;
+    }
+    .navText{
+        box-sizing: border-box;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .maps{
+        box-sizing: border-box;
+        margin: 20px;
+        width: 85%;
+        height: 85%;
+    }
+    .dressCode{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: cursive;
+        font-size: 16px;
+        margin: 0px 0px;
+    }
+    .circle1{
+        width: 45px;
+        height: 45px;
+        background-color: blue;
+        border: 1px solid black;
+        border-radius: 50px; 
+        
+    }
+    .circle2{
+        width: 45px;
+        height: 45px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 50px; 
+    }
+    .circle3{
+        width: 45px;
+        height: 45px;
+        background-color: red;
+        border: 1px solid black;
+        border-radius: 50px; 
+    }
+    .circle4{
+        width: 45px;
+        height: 45px;
+        background-color: green;
+        border: 1px solid black;
+        border-radius: 50px; 
+    }
+    .tips{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: cursive;
+        font-size: 16px;
+        margin: 100px 0px 0px;
+    }
+    .feedbackText p{
+        font-family: cursive;
+        font-size: 16px;
+        width: 97%;
+    }
+    .formPresence{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px;
+    }
+    .formPresence label{
+        display: block;
+        margin: 30px 10px;
+        font-size: 20px;
+    }
+    .formPresence img{
+        width: 90vw;
+    }
+    input[type="text"]{
+        border: 0px;
+        width: 72%;
+        height: 30px;
+    }
+    .personal p{
+        color: grey;
+        padding: 10px 0px;
+        margin-right: 20px;
+        width: 76%;
+    }
+    .personal div{
+        border: 1px solid grey;
+        width: 76%;
+    }
+    .footer img{
+        width: 90%;
+        height: 90%;
+    }
+    .footer p{
+        padding: 60px 5px 30px;
+        font-size: 24px;
+    }
+
 }
 @media screen and (max-device-width: 960px){
     .background{
@@ -345,6 +459,121 @@ fieldset{
         max-width: 90vw;
         max-height: 90vh;  
     }
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 100px 10px;
+    }
+    .navText{
+        box-sizing: border-box;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    .maps{
+        box-sizing: border-box;
+        margin: 20px;
+        width: 85%;
+        height: 85%;
+    }
+    .dressCode{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: cursive;
+        font-size: 16px;
+        margin: 0px 0px;
+    }
+    .circle1{
+        width: 45px;
+        height: 45px;
+        background-color: blue;
+        border: 1px solid black;
+        border-radius: 50px; 
+        
+    }
+    .circle2{
+        width: 45px;
+        height: 45px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 50px; 
+    }
+    .circle3{
+        width: 45px;
+        height: 45px;
+        background-color: red;
+        border: 1px solid black;
+        border-radius: 50px; 
+    }
+    .circle4{
+        width: 45px;
+        height: 45px;
+        background-color: green;
+        border: 1px solid black;
+        border-radius: 50px; 
+    }
+
+    .tips{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: cursive;
+        font-size: 16px;
+        margin: 100px 0px 0px;
+    }
+    .feedbackText p{
+        font-family: cursive;
+        font-size: 16px;
+        width: 97%;
+    }
+    .formPresence{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px;
+    }
+    .formPresence label{
+        display: block;
+        margin: 30px 10px;
+        font-size: 20px;
+    }
+    .formPresence img{
+        width: 90vw;
+    }
+    input[type="text"]{
+        border: 0px;
+        width: 72%;
+        height: 30px;
+    }
+    .personal p{
+        color: grey;
+        padding: 10px 0px;
+        margin-right: 20px;
+        width: 76%;
+    }
+    .personal div{
+        border: 1px solid grey;
+        width: 76%;
+    }
+    .footer img{
+        width: 90%;
+        height: 90%;
+    }
+    .footer p{
+        padding: 60px 5px 30px;
+        font-size: 24px;
+    }
+
 }
 @media screen and (max-device-width: 1264px){
     .background{
@@ -356,6 +585,7 @@ fieldset{
         max-width: 90vw;
         max-height: 90vh;  
     }
+
 }
 @media screen and (max-device-width: 1904px){
     .background{
