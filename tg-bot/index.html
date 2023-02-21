@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoilerPlate</title>
+    <link rel="stylesheet" href="css/reset.css">
+
+</head>
+<body>
+    <div class="box">
+        <form id="tg">
+        <input type="text" class="custom-checkbox" id="name" name="name">
+        <label for="name">ФИО</label>
+        <input type="text" class="custom-checkbox" id="alco" name="alco">
+        <label for="alco">Какой алко нужен?</label>
+        <div>
+            <div id="success" class="alert alert-success" role="alert" style="display: none;"></div>
+        </div>
+        <button type="submit">Отправить</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script>
+        const TOKEN = "5573450921:AAHVNU7xO5SyJiy53oLXEH6ukGR9fb0jRUg";
+        const CHAT_ID = "-1001566498221";
+        const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+
+        document.getElementById('tg').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let message = `<b> Заявка с сайта!</b>\n`;
+            message += `<b>Отправитель: </b> ${ this.name.value}\n`
+            message += `<b>Алкоголь: </b> ${ this.alco.value}\n`
+            
+            axios.post(URI_API, {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: message
+            })
+            .then((res) => {
+                this.name.value = "";
+                this.alco.value = "";
+                success.innerHTML = "Сообщение отправлено!";
+                success.style.display = "block";
+            })
+            .catch((err) => {
+                console.warn(err);
+            })
+            .finally(() =>{
+                console.log('Конец');;
+            } )
+        })
+    </script>
+
+</body>
+</html>
