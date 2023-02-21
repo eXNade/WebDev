@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoilerPlate</title>
+    <title>Андрей и Анастасия</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slide-show.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
@@ -159,11 +160,11 @@
                             </fieldset>
                             <fieldset class="presence">
                                 <label for="client">Ваши предпочтения в алкоголе?</label>
-                                <input type="radio" name="client" value="Вино"><span>Вино</span><br>
-                                <input type="radio" name="client" value="Шампанское"><span>Шампанское</span><br>
-                                <input type="radio" name="client" value="Пиво"><span>Пиво</span><br>
-                                <input type="radio" name="client" value="КрепкийАлкоголь"><span>Крепкий алкоголь</span><br>
-                                <input type="radio" name="client" value="безАлкогольное"><span>Что-нибудь безалкогольное</span>
+                                <input type="checkbox" name="client" value="Вино"><span>Вино</span><br>
+                                <input type="checkbox" name="client" value="Шампанское"><span>Шампанское</span><br>
+                                <input type="checkbox" name="client" value="Пиво"><span>Пиво</span><br>
+                                <input type="checkbox" name="client" value="КрепкийАлкоголь"><span>Крепкий алкоголь</span><br>
+                                <input type="checkbox" name="client" value="безАлкогольное"><span>Что-нибудь безалкогольное</span>
                             </fieldset>
                             <input type="submit">
                         </form>
@@ -178,9 +179,42 @@
             <div class="lastText">
                 <p>Мы любим друг друга!</p>
             </div>
-            <div>
-                <img src="img/restoran.png" alt="restoran">
-            </div>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img/img1.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+                </div>
+        
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img/img2.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img/img3.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+            
+            <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+                <script src="js/slide-show.js"></script>
             <div  class="lastText">
                 <p>БУДЕМ СЧАСТЛИВЫ ВИДЕТЬ ВАС!</p>
             </div>

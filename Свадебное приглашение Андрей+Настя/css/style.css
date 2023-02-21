@@ -296,6 +296,15 @@ p, h1{
 input[type="radio"]{
     display: inline-block;
 }
+input[type="checkbox"]{
+    display: inline-block;
+}
+input[type="submit"]{
+    width: 90vw;
+    height: 7vh;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+}
 .personal p{
     color: grey;
     padding: 10px 0px;
