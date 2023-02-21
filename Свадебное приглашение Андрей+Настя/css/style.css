@@ -1,6 +1,16 @@
 p, h1{
     font-family: 'Playfair Display', serif;
 }
+hr.style-one {
+    width: 60vw;
+    border: 0;
+    height: 1px;
+    background: #d4d4d4;
+    background-image: -webkit-linear-gradient(left, #f8f5f5, #6e6e6e, #f8f5f5);
+    background-image: -moz-linear-gradient(left, #f8f5f5, #6e6e6e, #f8f5f5);
+    background-image: -ms-linear-gradient(left, #f8f5f5, #6e6e6e, #f8f5f5);
+    background-image: -o-linear-gradient(left, #f8f5f5, #6e6e6e, #f8f5f5);
+}
 .background{
     width: 100vw;
     max-height: 100vh;
@@ -113,7 +123,7 @@ p, h1{
     padding: 20px;
 }
 .textBlock img{
-    width: 15%;
+    width: 10vw;
     padding: 30px;
 }
 .textBlock1 p{
@@ -209,6 +219,7 @@ p, h1{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin: 0px 0px 80px;
 }
 .blockCircles{
     padding: 0px 10px;
@@ -253,11 +264,11 @@ p, h1{
     text-align: center;
     font-family: cursive;
     font-size: 16px;
-    margin: 100px 500px 0px;
+    margin: 80px 0px 80px;
 }
 .tipsText h1{
     font-size: 42px;
-    padding: 70px 0px 45px;
+    padding: 0px 0px 45px;
 }
 .tipsText p{
     width: 75vw;
@@ -272,7 +283,7 @@ p, h1{
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 150px 0px 105px 0px;
+    margin: 80px 0px 80px 0px;
 }
 .feedbackText h1{
     font-size: 42px;
@@ -293,17 +304,12 @@ p, h1{
     margin: 10px;
     font-size: 20px;
 }
-input[type="radio"]{
-    display: inline-block;
-}
-input[type="checkbox"]{
-    display: inline-block;
-}
 input[type="submit"]{
     width: 90vw;
     height: 7vh;
     background-color: #FFFFFF;
     text-transform: uppercase;
+    color: black;
 }
 .personal p{
     color: grey;
@@ -318,12 +324,83 @@ input[type="text"]{
     border: 1px solid grey;
     width: 100%;
 }
-.formPresence img{
-    width: 80%;
+.feedbackText img{
+    margin-top: 50px;
+    width: 50%;
 }
-fieldset{
-    width: 100%;
+
+  /* для элемента input c type="radio" */
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
 }
+  /* для элемента label связанного с .custom-radio */
+.custom-radio+label {
+    display: block;
+    align-items: center;
+    user-select: none;
+}
+  /* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+  /* стили при наведении курсора на радио */
+.custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    background-color: #b3d7ff;
+}
+  /* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+  /* для элемента input c type="checkbox" */
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.custom-checkbox+label {
+    display: block;
+    align-items: center;
+    user-select: none;
+  }
+  .custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  .custom-checkbox:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
+  .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    background-color: #b3d7ff;
+  }
 
 /*Последний блок*/
 
@@ -362,7 +439,7 @@ fieldset{
         padding: 0px 0px 0px;
     }
     .textBlock img{
-        width: 20%;
+        width: 40%;
         padding: 0px 20px;
     }
     .textBlock1 p{
@@ -452,7 +529,6 @@ fieldset{
         align-items: center;
         text-align: center;
         font-size: 16px;
-        margin: 100px 0px 0px;
     }
     .feedbackText p{
         font-size: 16px;
@@ -471,7 +547,8 @@ fieldset{
         margin: 30px 10px;
         font-size: 20px;
     }
-    .formPresence img{
+    .feedbackText img{
+        margin-top: 50px;
         width: 90vw;
     }
     input[type="text"]{
@@ -508,6 +585,10 @@ fieldset{
     .ImgPosition img{
         max-width: 90vw;
         max-height: 90vh;  
+    }
+    .textBlock img{
+        width: 40%;
+        padding: 0px 20px;
     }
     .navigation{
         display: flex;
@@ -575,7 +656,6 @@ fieldset{
         align-items: center;
         text-align: center;
         font-size: 16px;
-        margin: 100px 0px 0px;
     }
     .feedbackText p{
         font-size: 16px;

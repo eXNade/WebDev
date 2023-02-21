@@ -47,7 +47,7 @@
                         <div class="H-er">
                             <h1>Сбор гостей</h1>
                         </div>
-                        <p>На всякий случай, приготовьте носовые платочки для трогательного момента</p>
+                        <p>Просим взять с собой хорошее настроение и свои улыбки</p>
                     </div>
                 </div>
                 <div class="textBlock">
@@ -91,6 +91,7 @@
                     </div>
                 </div>
             </section>
+            <hr class="style-one">
             <section class="part2">
                 <div class="position">
                     <h1>Место проведения торжества</h1>
@@ -113,6 +114,7 @@
                     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa99fc1bddf78fa2e872904a69732f2a648aea7f01e646ade4f321b54f87508c0&amp;width=100%&amp;height=398&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
             </section>
+            <hr class="style-one">
             <section class="dressCode">
                 <div class="DCtext">
                     <h1>Dress code</h1>
@@ -133,45 +135,50 @@
                     </div>
                 </div>
             </section>
+            <hr class="style-one">
             <section class="tips">
                 <div class="tipsText">
                     <h1>Подсказки</h1>
                     <p>«Если вы желаете поздравить нас по случаю праздника, мы будем благодарны денежным подаркам и обещаем найти им самое лучшее применение.»</p>
                 </div>
             </section>
+            <hr class="style-one">
             <section class="feedback">
                 <div class="feedbackText">
                     <h1>Подтвердите, пожалуйста, cвоё присутствие на торжестве</h1>
                     <p>ВАШИ ОТВЕТЫ НА ВОПРОСЫ ОЧЕНЬ ПОМОГУТ НАМ ПРИ ОРГАНИЗАЦИИ СВАДЬБЫ</p>
+                    <img src="img/restoran.png" alt="restoran">
                 </div>
                 <div class="formPresence">
-                    <div>
-                        <form action="">
-                            <fieldset class="presence">
-                                <label for="client">Присутствие на мероприятии</label>
-                                <input type="radio" name="client" value="буду"><span>Я приду/Мы придем</span><br>
-                                <input type="radio" name="client" value="будуПарой"><span>Буду со своей парой</span><br>
-                                <input type="radio" name="client" value="отсутствует"><span>Прийти не получится</span>
-                            </fieldset>
-                            <fieldset class="personal">
-                                <label for="fio"> Имя и Фамилия <p>если вы будете с парой или с семьёй, то внесите все имена</p> </label>
-                                <input type="text" name="fio" placeholder="Иванов Иван, Иванова Мария...">
-                                <div></div>
-                            </fieldset>
-                            <fieldset class="presence">
-                                <label for="client">Ваши предпочтения в алкоголе?</label>
-                                <input type="checkbox" name="client" value="Вино"><span>Вино</span><br>
-                                <input type="checkbox" name="client" value="Шампанское"><span>Шампанское</span><br>
-                                <input type="checkbox" name="client" value="Пиво"><span>Пиво</span><br>
-                                <input type="checkbox" name="client" value="КрепкийАлкоголь"><span>Крепкий алкоголь</span><br>
-                                <input type="checkbox" name="client" value="безАлкогольное"><span>Что-нибудь безалкогольное</span>
-                            </fieldset>
-                            <input type="submit">
-                        </form>
-                    </div>
-                    <div>
-                        <img src="img/restoran.png" alt="restoran">
-                    </div>
+                    <form action="">
+                        <fieldset  class="presence">
+                            <label for="client">Присутствие на мероприятии</label>
+                            <input class="custom-radio" name="client" type="radio" id="willBe" value="Буду/ем">
+                            <label for="willBe">Я приду/Мы придем</label>
+                            <input class="custom-radio" name="client" type="radio" id="gf/bf" value="Буду-С-Парой">
+                            <label for="gf/bf">Буду со своей парой</label>
+                            <input class="custom-radio" name="client" type="radio" id="never" value="Отсутствует">
+                            <label for="never">Прийти не получится</label>
+                        </fieldset>
+                        <fieldset class="personal">
+                            <label for="fio"> Имя и Фамилия <p>если вы будете с парой или с семьёй, то внесите все имена</p> </label>
+                            <input type="text" name="fio" placeholder="Иванов Иван, Иванова Мария...">
+                            <div></div>
+                        </fieldset>
+                        <fieldset class="presence">
+                            <input type="checkbox" class="custom-checkbox" id="vino" name="vino" value="vino">
+                            <label for="vino">Вино</label>
+                            <input type="checkbox" class="custom-checkbox" id="champain" name="champain" value="champain">
+                            <label for="champain">Шампанское</label>
+                            <input type="checkbox" class="custom-checkbox" id="Beer" name="Beer" value="Beer">
+                            <label for="Beer">Пиво</label>
+                            <input type="checkbox" class="custom-checkbox" id="Krepkoe" name="Krepkoe" value="Krepkoe">
+                            <label for="Krepkoe">Крепкий алкоголь</label>
+                            <input type="checkbox" class="custom-checkbox" id="non-alko" name="non-alko" value="non-alko">
+                            <label for="non-alko">Что-нибудь безалкогольное</label>
+                        </fieldset>
+                        <input type="submit">
+                    </form>
                 </div>
             </section>
         </main>
@@ -207,7 +214,7 @@
                 </div>
                 <br>
             
-            <!-- The dots/circles -->
+                <!-- The dots/circles -->
                 <div style="text-align:center">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
