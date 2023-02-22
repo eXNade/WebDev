@@ -6,15 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoilerPlate</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-    <div class="box">
+    <div class="formPresence">
         <form id="tg">
-        <input type="text" class="custom-checkbox" id="name" name="name">
-        <label for="name">ФИО</label>
-        <input type="text" class="custom-checkbox" id="alco" name="alco">
-        <label for="alco">Какой алко нужен?</label>
+        <fieldset  class="presence">
+            <label for="client">Присутствие на мероприятии</label>
+            <input class="custom-radio" name="client1" type="radio" id="willBe" value="Буду/ем">
+             <label for="willBe">Я приду/Мы придем</label>
+             <input class="custom-radio" name="client2" type="radio" id="gf/bf" value="Буду-С-Парой">
+             <label for="gf/bf">Буду со своей парой</label>
+             <input class="custom-radio" name="client3" type="radio" id="never" value="Отсутствует">
+             <label for="never">Прийти не получится</label>
+        </fieldset>
+        <fieldset class="personal">
+            <input type="text" id="name" name="name" placeholder="Иванов Иван, Иванова Мария...">
+            <label for="name"> Имя и Фамилия <p>если вы будете с парой или с семьёй, то внесите все имена</p></label>
+            <div></div>
+        </fieldset>
+        <fieldset class="presence">
+            <input type="checkbox" class="custom-checkbox" id="vino" name="vino" value="vino">
+            <label for="vino">Вино</label>
+            <input type="checkbox" class="custom-checkbox" id="champain" name="champain" value="champain">
+            <label for="champain">Шампанское</label>
+            <input type="checkbox" class="custom-checkbox" id="Beer" name="Beer" value="Beer">
+            <label for="Beer">Пиво</label>
+            <input type="checkbox" class="custom-checkbox" id="Krepkoe" name="Krepkoe" value="Krepkoe">
+            <label for="Krepkoe">Крепкий алкоголь</label>
+            <input type="checkbox" class="custom-checkbox" id="non_alko" name="non_alko" value="non_alko">
+            <label for="non-alko">Что-нибудь безалкогольное</label>
+        </fieldset>
         <div>
             <div id="success" class="alert alert-success" role="alert" style="display: none;"></div>
         </div>
@@ -33,7 +56,33 @@
             
             let message = `<b> Заявка с сайта!</b>\n`;
             message += `<b>Отправитель: </b> ${ this.name.value}\n`
-            message += `<b>Алкоголь: </b> ${ this.alco.value}\n`
+            message += `<b>Присутствие: </b>` 
+            if(this.client1.checked == true){
+                message += this.client1.value + ` `;
+            }
+            if(this.client2.checked == true){
+                message += this.client2.value + ` `;
+            }
+            if(this.client3.checked == true){
+                message += this.client3.value + ` `;
+            }
+            
+            message += `\n<b>Алкоголь: </b>` 
+            if(this.vino.checked == true){
+                message += this.vino.value + ` `;
+            }
+            if(this.champain.checked == true){
+                message += this.champain.value + ` `;
+            }
+            if(this.Beer.checked == true){
+                message += this.Beer.value + ` `;
+            }
+            if(this.Krepkoe.checked == true){
+                message += this.Krepkoe.value + ` `;
+            }
+            if(this.non_alko.checked == true){
+                message += this.non_alko.value + ` `;
+            }
             
             axios.post(URI_API, {
                 chat_id: CHAT_ID,
@@ -42,7 +91,11 @@
             })
             .then((res) => {
                 this.name.value = "";
-                this.alco.value = "";
+                this.vino.checked = false;
+                this.champain.checked = false;
+                this.Beer.checked = false;
+                this.Krepkoe.checked = false;
+                this.non_alko.checked = false;
                 success.innerHTML = "Сообщение отправлено!";
                 success.style.display = "block";
             })
@@ -50,7 +103,7 @@
                 console.warn(err);
             })
             .finally(() =>{
-                console.log('Конец');;
+                console.log('Конец');;      
             } )
         })
     </script>

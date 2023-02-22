@@ -161,7 +161,8 @@ hr.style-one {
 }
 .ImgPosition img{
     max-width: 40vw;
-    max-height: 40vh;  
+    max-height: 40vh;
+    box-shadow: 0 0 10px grey;  
 }
 
 /*Блок с навигацие и ЯКартой*/
@@ -193,6 +194,7 @@ hr.style-one {
     margin: 20px;
     width: 45%;
     height: 45%;
+    box-shadow: 0 0 10px grey;  
 }
 
 /*Блок с ДрессКодом*/
@@ -229,8 +231,7 @@ hr.style-one {
     height: 70px;
     background-color: blue;
     border: 1px solid black;
-    border-radius: 50px; 
-    
+    border-radius: 50px;     
 }
 .circle2{
     width: 70px;
@@ -304,12 +305,31 @@ hr.style-one {
     margin: 10px;
     font-size: 20px;
 }
-input[type="submit"]{
+button[type="submit"]{
+
     width: 90vw;
     height: 7vh;
     background-color: #FFFFFF;
     text-transform: uppercase;
     color: black;
+
+}
+button[type="submit"]:hover{
+    background-color: black;
+    color: #FFFFFF;
+}
+div.alert{
+    width: 90vw;
+    height: 7vh;
+    background-color: #62c584;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #FFFFFF;  
+    text-align: center;  
+    text-justify: auto;
+    line-height: 7vh;
+    margin-bottom: 10px;
 }
 .personal p{
     color: grey;
@@ -327,6 +347,7 @@ input[type="text"]{
 .feedbackText img{
     margin-top: 50px;
     width: 50%;
+    box-shadow: 0 0 10px grey;  
 }
 
   /* для элемента input c type="radio" */
@@ -419,6 +440,7 @@ input[type="text"]{
     padding: 60px 0px 30px;
     font-size: 24px;
 }
+
 
 
 
@@ -555,6 +577,19 @@ input[type="text"]{
         border: 0px;
         width: 72%;
         height: 30px;
+    }
+    div.alert{
+        width: 90vw;
+        height: 10vh;
+        background-color: #62c584;
+        text-transform: uppercase;
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        color: #FFFFFF;  
+        text-align: center;  
+        text-justify: auto;
+        line-height: 3vh;
+        margin-bottom: 10px;
     }
     .personal p{
         color: grey;

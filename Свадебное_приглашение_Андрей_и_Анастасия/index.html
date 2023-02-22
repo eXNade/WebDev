@@ -149,7 +149,7 @@
                     <p>ВАШИ ОТВЕТЫ НА ВОПРОСЫ ОЧЕНЬ ПОМОГУТ НАМ ПРИ ОРГАНИЗАЦИИ СВАДЬБЫ</p>
                     <img src="img/restoran.png" alt="restoran">
                 </div>
-                <div class="formPresence">
+                <!--<div class="formPresence">
                     <form action="https://formspree.io/f/mdovejnv"
                     method="POST">
                         <fieldset  class="presence">
@@ -180,7 +180,105 @@
                         </fieldset>
                         <input type="submit">
                     </form>
-                </div>
+                </div>-->
+                <div class="formPresence">
+        <form id="tg">
+        <fieldset  class="presence">
+            <label for="client">Присутствие на мероприятии</label>
+            <input class="custom-radio" name="client1" type="checkbox" id="willBe" value="Буду/ем" checked>
+             <label for="willBe">Я приду/Мы придем</label>
+             <input class="custom-radio" name="client2" type="checkbox" id="gf/bf" value="Буду-С-Парой">
+             <label for="gf/bf">Буду со своей парой</label>
+             <input class="custom-radio" name="client3" type="checkbox" id="never" value="Отсутствует">
+             <label for="never">Прийти не получится</label>
+        </fieldset>
+        <fieldset class="personal">            
+            <label for="name"> Имя и Фамилия <p>если вы будете с парой или с семьёй, то внесите все имена</p></label>
+            <input type="text" id="name" name="name" placeholder="Иванов Иван, Иванова Мария..." required>
+            <div></div>
+        </fieldset>
+        <fieldset class="presence">
+            <input type="checkbox" class="custom-checkbox" id="vino" name="vino" value="Вино">
+            <label for="vino">Вино</label>
+            <input type="checkbox" class="custom-checkbox" id="champain" name="champain" value="Шампанское">
+            <label for="champain">Шампанское</label>
+            <input type="checkbox" class="custom-checkbox" id="Beer" name="Beer" value="Пиво">
+            <label for="Beer">Пиво</label>
+            <input type="checkbox" class="custom-checkbox" id="Krepkoe" name="Krepkoe" value="Крепкий алкоголь">
+            <label for="Krepkoe">Крепкий алкоголь</label>
+            <input type="checkbox" class="custom-checkbox" id="non_alko" name="non_alko" value="что-нибудь безалкогольное">
+            <label for="non-alko">Что-нибудь безалкогольное</label>
+        </fieldset>
+        <div>
+            <div id="success" class="alert alert-success" role="alert" style="display: none;"></div>
+        </div>
+        <button type="submit">Отправить</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script>
+        const TOKEN = "5573450921:AAHVNU7xO5SyJiy53oLXEH6ukGR9fb0jRUg";
+        const CHAT_ID = "-1001566498221";
+        const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+
+        document.getElementById('tg').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let message = `<b> Заявка с сайта!</b>\n`;
+            message += `<b>ФИО: </b> ${ this.name.value}\n`
+            message += `<b>Присутствие: </b>` 
+            if(this.client1.checked == true){
+                message += this.client1.value + ` `;
+            }
+            if(this.client2.checked == true){
+                message += this.client2.value + ` `;
+            }
+            if(this.client3.checked == true){
+                message += this.client3.value + ` `;
+            }
+            
+            message += `\n<b>Алкоголь: </b>` 
+            if(this.vino.checked == true){
+                message += this.vino.value + `, `;
+            }
+            if(this.champain.checked == true){
+                message += this.champain.value + `, `;
+            }
+            if(this.Beer.checked == true){
+                message += this.Beer.value + `, `;
+            }
+            if(this.Krepkoe.checked == true){
+                message += this.Krepkoe.value + `, `;
+            }
+            if(this.non_alko.checked == true){
+                message += this.non_alko.value + `, `;
+            }
+            
+            axios.post(URI_API, {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: message
+            })
+            .then((res) => {
+                this.name.value = "";
+                this.vino.checked = false;
+                this.champain.checked = false;
+                this.Beer.checked = false;
+                this.Krepkoe.checked = false;
+                this.non_alko.checked = false;
+                success.innerHTML = "Спасибо за Ваши ответы! Если что-то изменится, пожалуйста, сообщите нам!";
+                success.style.display = "block";
+            })
+            .catch((err) => {
+                console.warn(err);
+            })
+            .finally(() =>{
+                console.log('Конец');;      
+            } )
+        })
+    </script>
+
             </section>
         </main>
         <footer class="footer">
