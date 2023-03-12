@@ -143,12 +143,13 @@ hr.style-one {
     margin: 0px 0px 90px 0px;
 }
 .texter{
-    margin: 90px 0px 0px 40px;
+    margin: 90px 10px 0px 40px;
     
 }
 .H-er{
     padding: 0px 0px 40px;
     font-weight: 700;
+    font-size: 18px;
 }
 
 /*Второй блок (Место проведения торжества)*/
@@ -496,9 +497,9 @@ input[type="text"]{
     }
     p.time{
         font-weight: 700;
-        font-size: 32px;
+        font-size: 28px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        padding: 0px 0px 0px 20px;
+        padding: 0px 0px 0px 15px;
     }
     .textBlock img{
         width: 40%;
