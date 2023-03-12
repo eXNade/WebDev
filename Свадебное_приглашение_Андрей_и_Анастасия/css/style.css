@@ -472,12 +472,9 @@ input[type="text"]{
         width: 100%;
         height: 40%;
         margin: 200px 0px 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-around   ;
+        justify-content: space-around;
         align-items: center;
         align-content: center;
         color: #FFFFFF;
@@ -492,18 +489,19 @@ input[type="text"]{
         justify-content: center;
         flex-direction: row;
         align-items: center;
-        width: 60%;
         font-size: 18px;
+        width: 100%;
+
     }
     p.time{
         font-weight: 700;
-        font-size: 28px;
+        font-size: 32px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        padding: 0px 20px 0px 0px;
+        padding: 0px 0px 0px 20px;
     }
     .textBlock img{
         width: 40%;
-        padding: 0px 20px;
+        padding: 0px 0px;
     }
     .textBlock1 p{
         font-size: 42px;

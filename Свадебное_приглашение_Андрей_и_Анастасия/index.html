@@ -154,9 +154,7 @@
                 <label for="client">Присутствие на мероприятии</label>
                 <input class="custom-radio" name="client1" type="checkbox" id="willBe" value="Буду/ем" checked>
                 <label for="willBe">Я приду/Мы придем</label>
-                <input class="custom-radio" name="client2" type="checkbox" id="gf/bf" value="Буду-С-Парой">
-                <label for="gf/bf">Буду со своей парой</label>
-                <input class="custom-radio" name="client3" type="checkbox" id="never" value="Отсутствует">
+                <input class="custom-radio" name="client2" type="checkbox" id="never" value="Отсутствует/не будет">
                 <label for="never">Прийти не получится</label>
             </fieldset>
             <fieldset class="personal">            
@@ -201,9 +199,7 @@
             if(this.client2.checked == true){
                 message += this.client2.value + ` `;
             }
-            if(this.client3.checked == true){
-                message += this.client3.value + ` `;
-            }
+
             
             message += `\n<b>Алкоголь: </b>` 
             if(this.vino.checked == true){
