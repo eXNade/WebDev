@@ -41,7 +41,7 @@ hr.style-one {
 .content{
     width: 100%;
     height: 40%;
-    margin: 100px 0px 0px;
+    margin: 150px 0px 200px;
     position: absolute;
     top: 0;
     left: 0;
@@ -58,7 +58,7 @@ hr.style-one {
     line-height: 1.45;
 }
 .innerText{
-    padding: 60px 0px 0px 0px;
+    padding: 150px 0px 0px 0px;
 }
 .content p{
     width: 80vw;
@@ -472,7 +472,7 @@ input[type="text"]{
     .content{
         width: 100%;
         height: 40%;
-        margin: 200px 0px 0px;
+        margin: 150px 0px 200px 0px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
